@@ -13,6 +13,7 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit() {
     // Initialize 'product' with sample product data
     this.product = {
+      id: 1,
       name: 'Artwork Name',
       description: 'Description',
       price: 100,

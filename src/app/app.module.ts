@@ -17,10 +17,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon'; // If you want to use icons in the card
 import {MatExpansionModule} from '@angular/material/expansion';
-
+import { FooterComponent } from './shared/footer/footer.component';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faFilm } from '@fortawesome/free-solid-svg-icons';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -31,8 +33,15 @@ MatCardModule,MatIconModule,
     MatButtonModule,
     MatInputModule,
     MatToolbarModule,MatFormFieldModule,MatExpansionModule
-  ],
+  ,FontAwesomeModule
+
+
+],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(library: FaIconLibrary) {
+    library.addIcons(faFilm);
+  }
+}

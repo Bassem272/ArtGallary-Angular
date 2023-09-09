@@ -22,7 +22,7 @@ import { MatIconModule } from '@angular/material/icon'; // If you want to use ic
     RegisterComponent,
     LoginComponent,
     ResetPasswordComponent,
-    FooterComponent,HeaderComponent
+    HeaderComponent
   ],
   imports: [
     CommonModule,

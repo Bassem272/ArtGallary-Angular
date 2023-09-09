@@ -1,0 +1,122 @@
+/* home.component.css */
+
+/* Featured Artworks Section */
+.featured-artworks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.artwork-card {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
+
+/* Style card images */
+.mat-card-image {
+  height: 200px; /* Adjust image height */
+  object-fit: cover; /* Maintain aspect ratio and cover the card */
+}
+
+/* Center card title and subtitle */
+.mat-card-title,
+.mat-card-subtitle {
+  text-align: center;
+}
+
+/* Gallery Introduction Section */
+.gallery-introduction {
+  text-align: center;
+  margin: 20px;
+}
+
+/* Upcoming Exhibitions Section */
+.upcoming-exhibitions {
+  margin: 20px;
+}
+
+/* Artists Spotlight Section */
+.artists-spotlight {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.artist-card {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+}
+
+/* Style artist card images */
+.artist-card .mat-card-image {
+  height: 200px; /* Adjust image height */
+  object-fit: cover; /* Maintain aspect ratio and cover the card */
+}
+
+/* Center artist card title */
+.artist-card .mat-card-title {
+  text-align: center;
+}
+
+/* Testimonials Section */
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.testimonial-card {
+  width: calc(50% - 20px);
+  margin-bottom: 20px;
+}
+
+/* Add styles for button hover effect */
+button.mat-button {
+  transition: background-color 0.3s ease;
+}
+
+button.mat-button:hover {
+  background-color: #007bff; /* Change to your desired hover color */
+  color: #fff; /* Change to text color on hover */
+}
+
+/* Add styles for links */
+a {
+  color: #007bff; /* Link color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3; /* Link color on hover */
+}
+.artwork-card {
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.artwork-card:hover {
+  transform: scale(1.05);
+}
+
+.artwork-card .mat-card-actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.artwork-card:hover .mat-card-actions {
+  opacity: 1;
+}

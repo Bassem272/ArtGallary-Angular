@@ -21,6 +21,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HeaderHomeComponent } from '../shared/header-home/header-home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -43,7 +49,7 @@ MatInputModule,
 MatCheckboxModule,
 MatSidenavModule,
 MatCardModule,
-MatFormFieldModule,
+MatFormFieldModule,FontAwesomeModule
 
 
   ]

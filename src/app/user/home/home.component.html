@@ -5,13 +5,49 @@
   <h2>Featured Artworks</h2>
   <!-- Use Angular Material cards to display featured artworks -->
   <mat-card *ngFor="let artwork of featuredArtworks" class="artwork-card">
-    <img mat-card-image [src]="artwork.imageUrl" alt="{{ artwork.title }}">
+    <img mat-card-image [src]="artwork.image" alt="{{ artwork.title }}">
     <mat-card-title>{{ artwork.title }}</mat-card-title>
     <mat-card-subtitle>{{ artwork.artist }}</mat-card-subtitle>
     <mat-card-actions>
-      <button mat-button color="primary" routerLink="/artwork/{{ artwork.id }}">View Details</button>
+      <button mat-button color="primary" (click)="viewArtworkDetails(artwork.id)" >View Details</button>
     </mat-card-actions>
   </mat-card>
+</section>
+<!-- Featured Artists Section -->
+<mat-grid-list cols="3" rowHeight="300px">
+  <mat-grid-tile *ngFor="let artwork of featuredArtworks">
+    <mat-card class="artwork-card">
+      <img mat-card-image [src]="artwork.image" alt="{{ artwork.title }}">
+      <mat-card-title>{{ artwork.title }}</mat-card-title>
+      <mat-card-subtitle>{{ artwork.artist }}</mat-card-subtitle>
+      <mat-card-actions>
+        <button mat-button color="primary" (click)="viewArtworkDetails(artwork.id)">View Details</button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<section class="featured-artworks">
+  <h2>Featured Artworks</h2>
+  <mat-grid-list cols="3" rowHeight="300px">
+    <mat-grid-tile *ngFor="let artwork of featuredArtworks">
+      <div
+        class="artwork-card"
+        (mouseenter)="hoveredArtwork = artwork"
+        (mouseleave)="hoveredArtwork = null"
+      >
+        <img mat-card-image [src]="artwork.image" alt="{{ artwork.title }}">
+        <mat-card-title>{{ artwork.title }}</mat-card-title>
+        <mat-card-subtitle>{{ artwork.artist }}</mat-card-subtitle>
+        <mat-card-actions *ngIf="hoveredArtwork === artwork">
+          <button mat-icon-button color="primary" (click)="addToCart(artwork)">
+            <fa-icon [icon]="faCartPlus"></fa-icon>
+          </button>
+          <button mat-button color="primary" (click)="viewArtworkDetails(artwork.id)">View Details</button>
+        </mat-card-actions>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
 </section>
 
 <!-- Gallery Introduction Section -->
@@ -40,7 +76,7 @@
   <h2>Artists Spotlight</h2>
   <!-- Use Angular Material cards to showcase artists -->
   <mat-card *ngFor="let artist of featuredArtists" class="artist-card">
-    <img mat-card-image [src]="artist.imageUrl" alt="{{ artist.name }}">
+    <img mat-card-image [src]="artist.image" alt="{{ artist.name }}">
     <mat-card-title>{{ artist.name }}</mat-card-title>
     <mat-card-actions>
       <button mat-button color="primary">View Portfolio</button>
