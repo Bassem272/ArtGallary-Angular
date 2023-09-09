@@ -34,7 +34,7 @@ import {
     MatFormFieldModule,
     BrowserModule,
     MatExpansionModule,
-    FontAwesomeModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent],
