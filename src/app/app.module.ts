@@ -16,6 +16,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon'; // If you want to use icons in the card
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ MatCardModule,MatIconModule,
 
     MatButtonModule,
     MatInputModule,
-    MatToolbarModule,MatFormFieldModule
+    MatToolbarModule,MatFormFieldModule,MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

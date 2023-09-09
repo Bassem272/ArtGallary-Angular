@@ -1,0 +1,10 @@
+/* Style for header expansion panels */
+.header-panel {
+  width: 150px; /* Set a fixed width for the expansion panels */
+  transition: width 0.3s ease-in-out; /* Add a smooth transition effect for expansion */
+}
+
+/* Hover effect to expand the panel on hover */
+.header-panel:hover {
+  width: 300px; /* Adjust the expanded width as needed */
+}

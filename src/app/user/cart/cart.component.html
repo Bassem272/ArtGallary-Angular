@@ -1,1 +1,17 @@
 <p>cart works!</p>
+<mat-card>
+  <mat-card-title>Shopping Cart</mat-card-title>
+  <mat-divider></mat-divider>
+  <div *ngFor="let item of cartItems">
+    <mat-card-content>
+      <p>{{ item.name }}</p>
+      <p>Price: ${{ item.price }}</p>
+      <p>Quantity: {{ item.quantity }}</p>
+    </mat-card-content>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-card-content>
+    <p>Total: ${{ getTotalPrice() }}</p>
+    <button mat-raised-button color="primary">Checkout</button>
+  </mat-card-content>
+</mat-card>
