@@ -16,9 +16,9 @@ import { MatIconModule } from '@angular/material/icon'; // If you want to use ic
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FooterComponent } from './shared/footer/footer.component';
 import {
-  FontAwesomeModule,
   FaIconLibrary,
 } from '@fortawesome/angular-fontawesome';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [AppComponent, FooterComponent],
@@ -33,8 +33,8 @@ import {
     MatToolbarModule,
     MatFormFieldModule,
     BrowserModule,
-    MatExpansionModule,
-  
+    MatExpansionModule,FontAwesomeModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
