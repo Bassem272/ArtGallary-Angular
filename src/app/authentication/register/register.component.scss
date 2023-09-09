@@ -1,0 +1,42 @@
+/* register.component.css */
+
+// .container {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center; /* Center horizontally */
+//   justify-content: center; /* Center vertically */
+//   height: 100vh; /* Make the container fill the viewport height */
+//   // background-image: url('your-pattern-image.jpg'); /* Add your pattern background */
+//   background-size: cover; /* Adjust background image size as needed */
+// }
+/* your-component.css */
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // background-image: url('your-pattern-image.jpg');
+  background-size: cover;
+  height: 60vh;
+
+}
+
+form{
+
+  display: grid;
+  grid-template-rows: fr fr fr fr;
+  width: 30vw;
+  padding: 15px;
+}
+.elements{
+  background-color: aqua;
+
+}
+h2{
+// background-color: ;
+  align-items: center;
+  text-align: center;
+}
+

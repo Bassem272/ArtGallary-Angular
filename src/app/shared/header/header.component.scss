@@ -1,0 +1,13 @@
+/* header.component.css */
+
+.custom-toolbar {
+  display: flex;
+  justify-content: space-between; /* Align items with space between them */
+  align-items: center; /* Vertically align items to the center */
+}
+
+.spacer {
+  flex: 1; /* Make the spacer expand and take up available space */
+}
+
+
