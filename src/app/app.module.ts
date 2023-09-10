@@ -15,9 +15,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon'; // If you want to use icons in the card
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FooterComponent } from './shared/footer/footer.component';
-import {
-  FaIconLibrary,
-} from '@fortawesome/angular-fontawesome';
+// import {
+  // FaIconLibrary,
+// } from '@fortawesome/angular-fontawesome';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -33,7 +33,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatToolbarModule,
     MatFormFieldModule,
     BrowserModule,
-    MatExpansionModule,FontAwesomeModule
+    MatExpansionModule,
+    FontAwesomeModule
 
   ],
   providers: [],

@@ -2,7 +2,7 @@ import { CartService } from './../cart.service';
 import { Component } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
-import { faFilm } from '@fortawesome/free-solid-svg-icons';
+// import { faFilm } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home',

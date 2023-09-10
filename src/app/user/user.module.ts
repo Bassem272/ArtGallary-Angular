@@ -49,7 +49,8 @@ MatInputModule,
 MatCheckboxModule,
 MatSidenavModule,
 MatCardModule,
-MatFormFieldModule,FontAwesomeModule
+MatFormFieldModule,
+FontAwesomeModule
 
 
   ]
