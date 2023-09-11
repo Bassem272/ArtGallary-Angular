@@ -3,13 +3,24 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
 // import { faFilm } from '@fortawesome/free-solid-svg-icons';
+export interface Tile {
 
+  cols: number;
+  rows: number;
+  text: string;
+}
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+  tiles: Tile[] = [
+    {text: 'One', cols: 3, rows: 1},
+    {text: 'Two', cols: 1, rows: 2},
+    {text: 'Three', cols: 2, rows: 2},
+
+  ];
 
   faCartPlus = faCartPlus;
 

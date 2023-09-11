@@ -5,6 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderHomeComponent } from './header-home/header-home.component';
 import {MatExpansionModule} from '@angular/material/expansion';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { Header2Component } from './header2/header2.component';
 
 
 
@@ -12,6 +13,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   declarations: [
 
 
+  
+    Header2Component
   ],
   imports: [
     CommonModule,MatExpansionModule,MatToolbarModule

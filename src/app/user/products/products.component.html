@@ -1,29 +1,32 @@
 <p>products works!</p>
 
 <app-header-home></app-header-home>
-<mat-card>
-  <mat-card-header>
+<app-header-home></app-header-home>
+<!-- <mat-card> -->
+  <!-- <mat-card-header>
     <mat-card-title>Products</mat-card-title>
   </mat-card-header>
+
+
   <mat-card-content>
     <mat-form-field>
       <input matInput (keyup)="applyFilter($event)" placeholder="Search">
-    </mat-form-field>
+    </mat-form-field> -->
 
     <!-- Side Filter Nav -->
-    <mat-sidenav-container>
+    <!-- <mat-sidenav-container>
       <mat-sidenav opened mode="side" class="sidenav">
         <mat-checkbox>Filter 1</mat-checkbox>
-        <mat-checkbox>Filter 2</mat-checkbox>
+        <mat-checkbox>Filter 2</mat-checkbox> -->
         <!-- Add more filters as needed -->
-      </mat-sidenav>
-    </mat-sidenav-container>
+      <!-- </mat-sidenav>
+    </mat-sidenav-container> -->
 
     <!-- Product List -->
-    <mat-table [dataSource]="dataSource" matSort>
+    <!-- <mat-table [dataSource]="dataSource" matSort> -->
 
       <!-- Define columns for your table -->
-      <ng-container matColumnDef="name">
+      <!-- <ng-container matColumnDef="name">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Name</mat-header-cell>
         <mat-cell *matCellDef="let product">{{ product.name }}</mat-cell>
       </ng-container>
@@ -51,14 +54,103 @@
       <ng-container matColumnDef="date">
         <mat-header-cell *matHeaderCellDef mat-sort-header>Date</mat-header-cell>
         <mat-cell *matCellDef="let product">{{ product.date | date }}</mat-cell>
-      </ng-container>
+      </ng-container> -->
 
       <!-- Add more columns as needed -->
 
-      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <!-- <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
       <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
     </mat-table>
 
     <mat-paginator [pageSizeOptions]="[5, 10, 25]" showFirstLastButtons></mat-paginator>
   </mat-card-content>
+</mat-card> -->
+
+
+
+
+
+
+<div class="contain">
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title-group>
+      <mat-card-title>Shiba Inu</mat-card-title>
+      <mat-card-subtitle>Extra large</mat-card-subtitle>
+      <img mat-card-xl-image src="../../../assets/betterHalfReality.png" >
+    </mat-card-title-group>
+  </mat-card-header>
+  <mat-card-content>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </mat-card-content>
 </mat-card>
+</div>
+ <div id="artTitle">Use Angular Material cards to display featured artworks </div>
+
+<section class="featured-artworks grid">
+ <mat-card *ngFor="let artwork of featuredArtworks" class="artwork-card">
+    <img mat-card-image [src]="artwork.image" alt="{{ artwork.title }}">
+    <div class="overlay" *ngIf="artwork.elevation === 8">
+      <button mat-button color="primary" (click)="viewArtworkDetails(artwork.id)">View Details</button>
+    </div>
+    <mat-card-title>{{ artwork.title }}</mat-card-title>
+    <mat-card-subtitle>{{ artwork.artist }}</mat-card-subtitle>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="viewArtworkDetails(artwork.id)" >View Details</button>
+    </mat-card-actions>
+  </mat-card>
+</section>
+
+<section class="featured-artworks grid">
+<mat-card *ngFor="let artwork of featuredArtworks" class="artwork-card mat-elevation-z2" (mouseover)="artwork.elevation = 8" (mouseleave)="artwork.elevation = 2" [class.mat-elevation-z8]="artwork.elevation === 8">
+  <img mat-card-image [src]="artwork.image" alt="{{ artwork.title }}">
+  <div class="overlay" *ngIf="artwork.elevation === 8">
+    <button id="view-btn" mat-button color="primary" (click)="viewArtworkDetails(artwork.id)">View Details</button>
+    <button id="add-btn" mat-button color="primary" (click)="addToCart(artwork)">add to cart <fa-icon [icon]="faCartPlus"></fa-icon></button>
+  </div>
+  <mat-card-title>{{ artwork.title }}</mat-card-title>
+  <mat-card-subtitle>{{ artwork.artist }}</mat-card-subtitle>
+  <mat-card-actions>
+    <button mat-button color="primary" (click)="viewArtworkDetails(artwork.id)">View Details</button>
+  </mat-card-actions>
+</mat-card>
+</section>
+<!--  ........................................... -->
+<!-- <section class="featured-artworks grid">
+  <mat-card *ngFor="let artwork of featuredArtworks"   (mouseenter)="onCardMouseEnter(product)"
+  (mouseleave)="onCardMouseLeave(product)"
+  [ngClass]="{'elevated': artwork.isHovered}">
+    <img mat-card-image [src]="artwork.image" alt="{{ artwork.title }}">
+    <div class="overlay" *ngIf="artwork.elevation === 8">
+      <button id="view-btn" mat-button color="primary" (click)="viewArtworkDetails(artwork.id)">View Details</button>
+      <button id="add-btn" mat-button color="primary" (click)="addToCart(artwork)">add to cart <fa-icon [icon]="faCartPlus"></fa-icon></button>
+    </div>
+    <mat-card-title>{{ artwork.title }}</mat-card-title>
+    <mat-card-subtitle>{{ artwork.artist }}</mat-card-subtitle>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="viewArtworkDetails(artwork.id)">View Details</button>
+    </mat-card-actions>
+  </mat-card>
+  </section> -->
+<!--  ........................................... -->
+<div id="artTitle">Use paginator Angular Material cards to display featured artworks </div>
+<section class="featured-artworks grid">
+  <mat-card *ngFor="let artwork of dataSource.data" class="artwork-card mat-elevation-z2" (mouseover)="artwork.elevation = 8" (mouseleave)="artwork.elevation = 2" [class.mat-elevation-z8]="artwork.elevation === 8">
+    <img mat-card-image [src]="artwork.image" alt="{{ artwork.title }}">
+    <div class="overlay" *ngIf="artwork.elevation === 8">
+      <button id="view-btn" mat-button color="primary" (click)="viewArtworkDetails(artwork.id)">View Details</button>
+      <button id="add-btn" mat-button color="primary" (click)="addToCart(artwork)">add to cart <fa-icon [icon]="faCartPlus"></fa-icon></button>
+    </div>
+    <mat-card-title>{{ artwork.title }}</mat-card-title>
+    <mat-card-subtitle>{{ artwork.artist }}</mat-card-subtitle>
+    <mat-card-actions>
+      <button mat-button color="primary" (click)="viewArtworkDetails(artwork.id)">View Details</button>
+    </mat-card-actions>
+  </mat-card>
+
+<mat-paginator [length]="featuredArtworks.length"
+  [pageSizeOptions]="pageSizeOptions"
+  (page)="onPageChange($event)">
+</mat-paginator>
+  </section>
+

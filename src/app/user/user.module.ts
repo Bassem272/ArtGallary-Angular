@@ -21,12 +21,12 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { HeaderHomeComponent } from '../shared/header-home/header-home.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { faPlus, faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { FormsModule } from '@angular/forms';
 
-
-
-
+import { MatTableDataSource } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -50,9 +50,15 @@ MatCheckboxModule,
 MatSidenavModule,
 MatCardModule,
 MatFormFieldModule,
-FontAwesomeModule
+FontAwesomeModule,FormsModule,
+MatPaginatorModule,
+MatSortModule,
 
 
   ]
 })
-export class UserModule { }
+export class UserModule {
+  constructor(library: FaIconLibrary) {
+    library.addIcons(faPlus,faCartPlus);
+  }
+}

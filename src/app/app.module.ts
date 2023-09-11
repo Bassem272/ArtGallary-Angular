@@ -19,6 +19,7 @@ import { FooterComponent } from './shared/footer/footer.component';
   // FaIconLibrary,
 // } from '@fortawesome/angular-fontawesome';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, FooterComponent],
@@ -34,7 +35,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatFormFieldModule,
     BrowserModule,
     MatExpansionModule,
-    FontAwesomeModule
+    FontAwesomeModule, FormsModule
 
   ],
   providers: [],
