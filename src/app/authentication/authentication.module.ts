@@ -22,14 +22,14 @@ import { MatIconModule } from '@angular/material/icon'; // If you want to use ic
     RegisterComponent,
     LoginComponent,
     ResetPasswordComponent,
-    HeaderComponent
+ 
   ],
   imports: [
     CommonModule,
     AuthenticationRoutingModule   , MatButtonModule,
     MatInputModule,
     MatToolbarModule,MatFormFieldModule,
-    MatCardModule,MatIconModule,
+    MatCardModule,MatIconModule,SharedModule
   ]
 })
 export class AuthenticationModule { }

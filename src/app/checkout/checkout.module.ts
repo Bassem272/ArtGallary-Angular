@@ -23,6 +23,7 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { SuccessComponent } from './success/success.component';
 import { FailureComponent } from './failure/failure.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ MatCheckboxModule,
 MatSidenavModule,
 MatCardModule,
 MatFormFieldModule,
-FontAwesomeModule,FormsModule
+FontAwesomeModule,FormsModule,
+SharedModule
   ]
 })
 export class CheckoutModule{

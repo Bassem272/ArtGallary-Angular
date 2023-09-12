@@ -27,13 +27,14 @@ import { faPlus, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 import { FormsModule } from '@angular/forms';
 
 import { MatTableDataSource } from '@angular/material/table';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ProductsComponent,
     ProductDetailsComponent,
-    CartComponent,HeaderHomeComponent
+    CartComponent
   ],
   imports: [
     CommonModule,
@@ -53,6 +54,8 @@ MatFormFieldModule,
 FontAwesomeModule,FormsModule,
 MatPaginatorModule,
 MatSortModule,
+
+SharedModule
 
 
   ]

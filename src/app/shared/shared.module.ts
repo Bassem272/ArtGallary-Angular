@@ -11,13 +11,21 @@ import { Header2Component } from './header2/header2.component';
 
 @NgModule({
   declarations: [
+HeaderComponent,
+FooterComponent,
+HeaderHomeComponent,
 
 
-  
     Header2Component
   ],
   imports: [
     CommonModule,MatExpansionModule,MatToolbarModule
-  ]
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+    HeaderHomeComponent,
+
+    Header2Component]
 })
 export class SharedModule { }
