@@ -1,4 +1,7 @@
 // SIDEBAR DROPDOWN
+function myFunction() {
+
+
 document.addEventListener('DOMContentLoaded', function () {
   // note ? the fetch methods are provided for the add suer adn the delete suer
   const allDropdown = document.querySelectorAll('#sidebar .side-dropdown');
@@ -682,3 +685,4 @@ document.addEventListener('DOMContentLoaded', function () {
   updateTotalProfit();
   setInterval(updateTotalProfit, 6000);
   });
+};

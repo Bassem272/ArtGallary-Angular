@@ -7,6 +7,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { Header2Component } from './header2/header2.component';
 import { MatButtonModule } from '@angular/material/button';
+import { AdminFooterComponent } from './admin-footer/admin-footer.component';
 
 
 
@@ -17,7 +18,8 @@ FooterComponent,
 HeaderHomeComponent,
 
 
-    Header2Component
+    Header2Component,
+      AdminFooterComponent
   ],
   imports: [
     CommonModule,MatExpansionModule,MatToolbarModule,MatButtonModule
@@ -26,7 +28,9 @@ HeaderHomeComponent,
     HeaderComponent,
     FooterComponent,
     HeaderHomeComponent,
+    Header2Component,
+    AdminFooterComponent
 
-    Header2Component]
+  ]
 })
 export class SharedModule { }

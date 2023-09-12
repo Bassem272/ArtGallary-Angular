@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+// import * as myScript from './script.js'
+import * as myScript from 'script.js';
+
+
 
 @Component({
   selector: 'app-admin-dashboard',
@@ -6,5 +10,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./admin-dashboard.component.scss']
 })
 export class AdminDashboardComponent {
+  // ngOnInit() {
+  //   myScript.myFunction();
+  // }
+// inject myScript in the component
+  // constructor() {
+  //   myScript.myFunction();
+  // }
 
 }
