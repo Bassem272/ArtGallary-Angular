@@ -21,6 +21,7 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
+import { AdminModule } from './admin/admin.module';
 
 @NgModule({
   declarations: [AppComponent, ],
@@ -36,7 +37,7 @@ import { SharedModule } from './shared/shared.module';
     MatFormFieldModule,
     BrowserModule,
     MatExpansionModule,
-    FontAwesomeModule, FormsModule,SharedModule
+    FontAwesomeModule, FormsModule,SharedModule,AdminModule
 
   ],
   providers: [],

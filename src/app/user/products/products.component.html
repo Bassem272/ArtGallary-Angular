@@ -105,7 +105,7 @@
 <mat-card *ngFor="let artwork of featuredArtworks" class="artwork-card mat-elevation-z2" (mouseover)="artwork.elevation = 8" (mouseleave)="artwork.elevation = 2" [class.mat-elevation-z8]="artwork.elevation === 8">
   <img mat-card-image [src]="artwork.image" alt="{{ artwork.title }}">
   <div class="overlay" *ngIf="artwork.elevation === 8">
-    <button id="view-btn" mat-button color="primary" (click)="viewArtworkDetails(artwork.id)">View Details</button>
+    <button id="view-btn" mat-button color="primary" class="mat-warn" (click)="viewArtworkDetails(artwork.id)">View Details</button>
     <button id="add-btn" mat-button color="primary" (click)="addToCart(artwork)">add to cart <fa-icon [icon]="faCartPlus"></fa-icon></button>
   </div>
   <mat-card-title>{{ artwork.title }}</mat-card-title>

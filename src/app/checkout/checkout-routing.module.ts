@@ -12,9 +12,7 @@ const routes: Routes = [
 
   },{
     path:'failure',component:FailureComponent
-  },{
-    path:"**",component:CheckoutDetailsComponent
-  }
+  },
 ];
 
 @NgModule({

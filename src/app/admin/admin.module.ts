@@ -30,17 +30,17 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     CommonModule,
     AdminRoutingModule,
-    MatCardModule,
-    MatIconModule,
-    MatButtonModule,
-    MatInputModule,
-    MatToolbarModule,
-    MatFormFieldModule,
-    BrowserModule,
     MatExpansionModule,
     FontAwesomeModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatCardModule,
+    MatIconModule,
+
+    MatInputModule,
   ]
 })
 export class AdminModule { }

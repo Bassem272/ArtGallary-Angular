@@ -1,4 +1,4 @@
-import { HeaderComponent } from './../../shared/header/header.component';
+
 import { Component } from '@angular/core';
 @Component({
   selector: 'app-admin-log-in',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 
 })
 export class AdminLogInComponent {
-  constructor(private headerComponent: HeaderComponent) {}
+
 }
