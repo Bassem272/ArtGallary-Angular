@@ -1,0 +1,51 @@
+/* Add this CSS to your styles.css or a dedicated CSS file */
+
+.profile-card {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.mat-card-header {
+  background-color: #1976D2; /* Header background color */
+  color: white; /* Header text color */
+  padding: 16px;
+}
+
+.mat-card-content {
+  padding: 16px;
+}
+
+.mat-card-actions {
+  display: flex;
+  justify-content: center;
+  background-color: #F5F5F5; /* Actions background color */
+  padding: 8px;
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white; /* Profile image border */
+  margin: 0 auto;
+  margin-top: -60px;
+}
+
+/* Style buttons */
+.mat-card-actions button {
+  margin: 0 8px;
+  background-color: #1976D2; /* Button background color */
+  color: white; /* Button text color */
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.mat-card-actions button:hover {
+  background-color: #1565C0; /* Hover background color */
+}

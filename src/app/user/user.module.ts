@@ -28,13 +28,17 @@ import { FormsModule } from '@angular/forms';
 
 import { MatTableDataSource } from '@angular/material/table';
 import { SharedModule } from '../shared/shared.module';
+import { ProfileComponent } from './profile/profile.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
     ProductsComponent,
     ProductDetailsComponent,
-    CartComponent
+    CartComponent,
+    ProfileComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,

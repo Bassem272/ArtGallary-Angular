@@ -19,6 +19,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import * as myScript from 'script.js';
+import { MatSidenav, MatSidenavContainer, MatSidenavModule } from '@angular/material/sidenav';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { CustomersComponent } from './customers/customers.component';
+import { OrdersComponent } from './orders/orders.component';
+import { ProductsComponent } from './products/products.component';
+import { AdminLogoutComponent } from './admin-logout/admin-logout.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +32,10 @@ import * as myScript from 'script.js';
     AdminLogInComponent,
     AdminDashboardComponent,
     AdminUserManagementComponent,
+    CustomersComponent,
+    OrdersComponent,
+    ProductsComponent,
+    AdminLogoutComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +51,8 @@ import * as myScript from 'script.js';
     MatIconModule,
 
     MatInputModule,
+    MatSidenavModule,MatGridListModule
+
   ]
 })
 export class AdminModule { }

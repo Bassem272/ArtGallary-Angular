@@ -1,17 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
-// import * as myScript from './script.js'
-import * as myScript from 'script.js';
-import { MatSidenav } from '@angular/material/sidenav';
 import { Router } from '@angular/router';
 
-
 @Component({
-  selector: 'app-admin-dashboard',
-  templateUrl: './admin-dashboard.component.html',
-  styleUrls: ['./admin-dashboard.component.scss']
+  selector: 'app-admin-sidenav',
+  templateUrl: './admin-sidenav.component.html',
+  styleUrls: ['./admin-sidenav.component.scss']
 })
-export class AdminDashboardComponent implements OnInit{
+export class AdminSidenavComponent implements OnInit{
   // ngOnInit() {
   //   myScript.myFunction();
   // }
