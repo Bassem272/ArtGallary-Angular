@@ -1,20 +1,30 @@
 <p>header-home works!</p>
 <mat-toolbar color="primary">
   <span>My Art Gallery</span>
-  <!-- Expansion panel for Word 1 -->
-  <mat-expansion-panel class="header-panel">
-    <mat-expansion-panel-header>
-      Word 1
-    </mat-expansion-panel-header>
-    <p>Data related to Word 1 goes here.</p>
-  </mat-expansion-panel>
-  <!-- Expansion panel for Word 2 -->
-  <mat-expansion-panel class="header-panel">
-    <mat-expansion-panel-header>
-      Word 2
-    </mat-expansion-panel-header>
-    <p>Data related to Word 2 goes here.</p>
-  </mat-expansion-panel>
-  <!-- Add more expansion panels for other words as needed -->
+
+  <!-- Home Button -->
+  <button mat-icon-button routerLink="../../user/home" routerLinkActive="active">
+    <mat-icon>home</mat-icon>
+  </button>
+
+  <!-- Profile Button -->
+  <button mat-icon-button routerLink="../../user/profile" routerLinkActive="active">
+    <mat-icon>person</mat-icon>
+  </button>
+
+  <!-- Products Button -->
+  <button mat-icon-button routerLink="../../user/products" routerLinkActive="active">
+    <mat-icon>store</mat-icon>
+  </button>
+
+  <!-- Cart Button -->
+  <button mat-icon-button routerLink="../../user/products" routerLinkActive="active">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+
+  <!-- Logout Button -->
+  <button mat-icon-button routerLink="../../auth/logout" >
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
 </mat-toolbar>
 

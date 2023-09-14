@@ -15,13 +15,15 @@ import { SharedModule } from '../shared/shared.module';
 import { FooterComponent } from '../shared/footer/footer.component';
 import { HeaderComponent } from '../shared/header/header.component';
 import { MatCardModule } from '@angular/material/card';
-import { MatIconModule } from '@angular/material/icon'; // If you want to use icons in the card
+import { MatIconModule } from '@angular/material/icon';
+import { LogoutComponent } from './logout/logout.component'; // If you want to use icons in the card
 
 @NgModule({
   declarations: [
     RegisterComponent,
     LoginComponent,
     ResetPasswordComponent,
+    LogoutComponent,
  
   ],
   imports: [

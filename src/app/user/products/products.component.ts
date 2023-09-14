@@ -242,6 +242,20 @@ console.log('we are here',this.featuredArtworks.length)
     }
   }
 
+
+
+  // getCustomers(){
+  //   return this.http.get(this.url+'/customers');
+  // }
+
+  // getCustomerById(id){
+  //   return this.http.get(this.url+'/customers/'+id);
+  // }
+
+  // getCustomerByName(name){
+  //   return this.http.get(this.url+'/customers/name/'+name);
+  // }
+
   }
 
 
