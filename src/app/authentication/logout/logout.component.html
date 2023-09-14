@@ -1,0 +1,20 @@
+<p>logout works!</p>
+
+<p>admin-logout works!</p>
+<!-- logout.component.html -->
+<app-header-home></app-header-home>
+
+<div class="centered-card">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Logout</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Are you sure you want to log out?</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="confirmLogout()">Logout</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
