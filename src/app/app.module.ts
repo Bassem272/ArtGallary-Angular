@@ -22,6 +22,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FormsModule } from '@angular/forms';
 import { SharedModule } from './shared/shared.module';
 import { AdminModule } from './admin/admin.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, ],
@@ -37,7 +38,7 @@ import { AdminModule } from './admin/admin.module';
     MatFormFieldModule,
     BrowserModule,
     MatExpansionModule,
-    FontAwesomeModule, FormsModule,SharedModule,AdminModule
+    FontAwesomeModule, FormsModule,SharedModule,AdminModule,HttpClientModule
 
   ],
   providers: [],

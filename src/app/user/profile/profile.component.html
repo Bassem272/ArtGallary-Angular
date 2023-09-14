@@ -1,19 +1,39 @@
 <p>profile works!</p>
+<!-- profile.component.html -->
+<app-header-home></app-header-home>
 
-<mat-card class="profile-card" *ngIf="user">
-  <mat-card-header>
-    <mat-card-title>{{ user.name }}</mat-card-title>
-    <mat-card-subtitle>{{ user.email }}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image src="{{ user.profileImage }}" alt="User Avatar" class="profile-image">
-  <mat-card-content>
-    <!-- Add more user details as needed -->
-    <p>{{ user.bio }}</p>
-    <p>Location: {{ user.location }}</p>
-  </mat-card-content>
-  <mat-card-actions>
-    <!-- Add buttons or actions here, e.g., Edit Profile, Logout, etc. -->
-    <button mat-button>Edit Profile</button>
-    <button mat-button>Logout</button>
-  </mat-card-actions>
-</mat-card>
+<ng-container *ngIf="!user; else userData">
+  <!-- Placeholder card with animation -->
+  <div class="placeholder-card" [@loadingAnimation]="true">
+    <div class="loading-line"></div>
+    <div class="loading-line"></div>
+    <div class="loading-line"></div>
+  </div>
+</ng-container>
+
+<!-- profile.component.html -->
+
+<ng-template #userData>
+  <!-- User data card -->
+  <mat-card class="profile-card">
+    <mat-card-content>
+      <div class="user-details">
+        <div class="user-name">{{ user.name }}</div>
+        <div class="user-email">{{ user.email }}</div>
+      </div>
+      <div class="user-info">
+        <p><strong>Phone:</strong> {{ user.phone }}</p>
+        <p><strong>Location:</strong> {{ user.address}}</p>
+        <p><strong>Job Title:</strong> {{ user.email }}</p>
+
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <!-- Add buttons or actions here, e.g., Edit Profile, Logout, etc. -->
+      <button mat-button>Edit Profile</button>
+      <button mat-button routerLink="/auth/logout">Logout</button>
+    </mat-card-actions>
+  </mat-card>
+</ng-template>
+
+

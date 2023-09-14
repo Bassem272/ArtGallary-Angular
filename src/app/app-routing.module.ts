@@ -4,6 +4,7 @@ import { RegisterComponent } from './authentication/register/register.component'
 import { HomeComponent } from './user/home/home.component';
 import { CheckoutModule } from './checkout/checkout.module';
 import { AdminLogInComponent } from './admin/admin-log-in/admin-log-in.component';
+import { LogoutComponent } from './authentication/logout/logout.component';
 const routes: Routes = [
 {
   path: 'auth',
@@ -17,7 +18,8 @@ const routes: Routes = [
   {
     path:'out',loadChildren: () => import('./checkout/checkout.module').then((m) => m.CheckoutModule),
   },
-{path:'admin',loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule),}
+{path:'admin',loadChildren: () => import('./admin/admin.module').then((m) => m.AdminModule),},
+
 
 
 ];

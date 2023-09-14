@@ -1,0 +1,14 @@
+/* logout.component.css */
+
+.centered-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure the card covers the full viewport height */
+}
+
+mat-card {
+  width: 300px; /* Adjust the card width as needed */
+  padding: 16px;
+  text-align: center;
+}
